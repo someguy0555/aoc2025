@@ -22,7 +22,7 @@ tupleToRange :: (Int, Int) -> [Int]
 tupleToRange (a,b) = [a..b]
 
 areHalfsEqual :: Int -> Bool
-areHalfsEqual a = uncurry (==) . splitAt len $ b
+areHalfsEqual num = uncurry (==) . splitAt len $ numStr
     where
-      b = show a
-      len = length b `div` 2
+      numStr = show num
+      len = length numStr `div` 2

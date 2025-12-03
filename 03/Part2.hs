@@ -1,10 +1,7 @@
 import System.Environment
 
 main :: IO ()
-main = do
-  args <- getArgs
-  input <- readFile $ head args
-  print . sum . map (findLargestVoltage 12 . map charToDigit) . lines $ input
+main = getContents >>= print . sum . map (findLargestVoltage 12 . map charToDigit) . lines
 
 charToDigit :: Char -> Int
 charToDigit c = read [c]

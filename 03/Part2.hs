@@ -1,7 +1,4 @@
-import Data.List.Split
 import System.Environment
-import Data.List (elemIndex)
-import Data.Bifunctor
 
 main :: IO ()
 main = do

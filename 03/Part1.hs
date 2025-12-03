@@ -11,11 +11,7 @@ charToDigit c = read [c]
 
 upToMax :: [Int] -> (Int,[Int])
 upToMax l = (maximum l,) . upToMax' $ l
-  where
-    upToMax' (ll:lls) =
-      if ll == maximum l
-          then lls
-          else upToMax' lls
+  where upToMax' = drop 1 . dropWhile (maximum l /=)
 
 findLargestVoltage :: [Int] -> Int
 findLargestVoltage [] = error "The list isn't supposed to be empty btw."

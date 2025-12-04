@@ -1,5 +1,6 @@
 import System.Environment
 
+-- >>> triple ""
 main :: IO ()
 main = getContents >>= print . sum . map (findLargestVoltage 12 . map charToDigit) . lines
 

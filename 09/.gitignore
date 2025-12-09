@@ -1,0 +1,6 @@
+*.o
+*.hi
+input*
+Part1
+Part2
+obj/
